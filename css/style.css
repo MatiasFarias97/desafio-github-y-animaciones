@@ -51,7 +51,17 @@ html {
     font-size: 1.5rem;
     transition: 0.5s;
     cursor: pointer;
+    background: linear-gradient(#258785ed,#258785ed);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 5px;
 } 
+
+.nav__style button:hover{
+    color: #258785ed;
+    font-weight: 400;
+    background-size: 100% 5px;
+}
 
 a {
     text-decoration: none;
@@ -125,6 +135,12 @@ h2,h3 {
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 5px;
+    transition: 0.5s;
+}
+
+.section__ofertas--img:hover{
+    transform: scale(1.1)
+
 }
 
 .footer__style {
@@ -261,6 +277,23 @@ h2,h3 {
         width: 10%;
     }
 
+    @keyframes animacion__aside {
+        0%{background-image: url(../imagenes/corona_aside.jpg);}
+        25%{background-image: url(imagenes/jagger_aside.jpg);}
+        50%{background-image: url(imagenes/skyy_aside.jpg);}
+        100%{background-image: url(imagenes/befeater_aside.png);}
+    }
+
+    .aside__animacion{
+        height: 100%;
+        width: 40%;
+        background-size: cover;
+        animation-name: animacion__aside;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        border: solid black 2px;
+    }
+
     html {
         overflow-x: hidden;
     }
@@ -321,6 +354,7 @@ h4{
     border-radius: 2px;
 }
 
+
 .section__vinos--flex figure{
     display: flex;
     flex-direction: column;
@@ -330,6 +364,11 @@ h4{
     background-color: #2c7877;
     padding: 5px;
     border-radius: 5px;
+    transition: 0.5seg;
+}
+
+.section__vinos--flex figure:hover{
+    transform: scale(1.1);
 }
 
 .section__vinos--flex p,figcaption {
@@ -412,14 +451,15 @@ h4{
     .section__vinos--flex figure{
         border-radius: 12px;
         padding: 10px;
-        width: 30%;
+        width: 25%;
     }
 
 }
 
 @media screen and (min-width: 1400px){
     .section__vinos--flex figure{
-        width: 25%;
+        width: 20%;
+        margin-bottom: 15px;
     }
 }
 
@@ -451,6 +491,11 @@ h4{
     background-color: #2c7877;
     padding: 5px;
     border-radius: 5px;
+    transition: 0.5seg;
+}
+
+.section__cervezas--flex figure:hover{
+    transform: scale(1.1);
 }
 
 .section__cervezas--flex p,figcaption {
@@ -526,14 +571,15 @@ h4{
     .section__cervezas--flex figure{
         border-radius: 12px;
         padding: 10px;
-        width: 30%;
+        width: 20%;
     }
 
 }
 
 @media screen and (min-width: 1400px){
     .section__cervezas--flex figure{
-        width: 25%;
+        width: 20%;
+        margin-bottom: 15px;
     }
 }
 
@@ -560,11 +606,16 @@ h4{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 40%;
+    width: 30%;
     margin: 10px;
     background-color: #2c7877;
     padding: 5px;
     border-radius: 5px;
+    transition: 0.5seg;
+}
+
+.section__espirituosas--flex figure:hover{
+    transform: scale(1.1);
 }
 
 .section__espirituosas--flex p,figcaption {
@@ -641,14 +692,15 @@ h4{
     .section__espirituosas--flex figure{
         border-radius: 12px;
         padding: 10px;
-        width: 30%;
+        width: 25%;
     }
 
 }
 
 @media screen and (min-width: 1400px){
     .section__espirituosas--flex figure{
-        width: 25%;
+        width: 18%;
+        margin-bottom: 15px;
     }
 }
 
@@ -680,6 +732,11 @@ h4{
     background-color: #2c7877;
     padding: 5px;
     border-radius: 5px;
+    transition: 0.5seg;
+}
+
+.section__ofertas--flex figure:hover{
+    transform: scale(1.1);
 }
 
 .section__ofertas--flex p,figcaption {
@@ -756,7 +813,8 @@ h4{
     .section__ofertas--flex figure{
         border-radius: 12px;
         padding: 10px;
-        width: 30%;
+        width: 25%;
+        margin-bottom: 15px;
     }
 
 }
