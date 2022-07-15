@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto+Condensed&display=swap');
+
+/* 1rem aprox 16px
+selectores por grupo se separa (h1,h2,3)
+selector especifico se separa por espacio (nav ul li a) en este caso llamo a "a"
+*/
+/* Selectores de etiqueta
+Selectores de ID se pone # + nombre ej #productos es uno por html
+padding es general
+padding top, padding bottom, padding left, padding right
+rgb ul #63AAD6
+rgb cajas #D6D44D
+rgb sin uso #8A8938*/
+* {
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box; 
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Oswald', sans-serif;
+    background-color: #e1e1e0;
+}
+
+.text__white {
+    color: rgb(247, 243, 243);
+}
+
+.text__dark {
+    color: rgb(11, 11, 11);
+}
+
+.logo__style {
+    width: 40%;
+}
+
+.div__color--top {
+    background-color: rgba(33, 32, 32, 0.742);
+    width: 100%;
+}
+
+.nav__style {
+    font-size: 1rem;
+}
+
+.nav__style button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    cursor: pointer;
+} 
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav__ul--style {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    width: 85%;
+    transition: 300ms;
+}
+
+.aside__style {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    margin-top: 2%;
+    font-size: 1.5rem;
+}
+.aside__style p {
+    background-color: #bfbd49a9;
+    padding: 2%;
+}
+
+.aside__img {
+    width: 80%;
+}
+
+h2,h3 {
+    background-color: #2c7877ed;
+    font-size: 2rem;
+    text-align: center;
+    padding: 5px;
+    width: 95%;
+    margin: auto;
+}
+
+.section__ofertas {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section__ofertas--div {
+    width: 98%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section__ofertas--img {
+    width: 30%;
+    height: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+}
+
+.footer__style {
+    margin-top: 10px;
+    background-color: rgba(33, 32, 32, 0.742);
+    font-size: 1rem;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.footer__style div img {
+    width: 30%;
+}
+
+.footer__style--div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/*GRID*/
+
+.div__contenedor {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "nav"
+    "aside"
+    "header"
+    "main"
+    "footer";
+}
+
+.grid__area--nav {
+    grid-area: nav;
+}
+
+.grid__area--aside {
+    grid-area: aside;
+}
+
+.grid__area--header {
+    grid-area: header;
+}
+
+.grid__area--main {
+    grid-area: main;
+}
+
+.grid__area--footer {
+    grid-area: footer;
+}
+
+/* @media */
+
+@media screen and (min-width: 768px){
+   
+    .logo__style{
+        width: 40%;
+    }
+
+    .nav__ul--style{
+        padding-left: 15px;
+    }
+
+    .nav__style button{
+        font-size: 2.5rem;
+    }
+
+    .aside__style p{
+        font-size: 3rem;
+    }
+
+    h2,h3{
+        font-size: 4rem;
+        padding-bottom: 10px;
+    }
+
+    .section__ofertas--img{
+        width: 20%;
+        height: 25%;
+    }
+
+   .footer__style{
+    font-size: 2.5rem;
+   }
+
+   .footer__style div img {
+    width: 20%;
+}
+}
+
+@media screen and (min-width: 1100px) {
+    .footer__style div img {
+        width: 10%;
+    }
+
+    .section__ofertas--img{
+        width: 15%;
+        height: 20%;
+    }
+
+    .aside__img{
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width: 1300px){
+    .aside__img {
+        width: 40%;
+    }
+
+    .logo__style {
+        width: 30%;
+    }
+
+    .section__ofertas--img {
+        margin: 10px;
+        width: 13%;
+        height: 15%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .footer__style div img {
+        width: 10%;
+    }
+
+    html {
+        overflow-x: hidden;
+    }
+    
+}
+
+/* TERMINA EL INDEX*/
+
+/* Empieza Vinos */
+
+h1 {
+    background-color: #2c7877ed;
+    font-size: 2rem;
+    text-align: start;
+    padding: 10px 5px 5px 15px;
+    width: 100%;
+}
+
+h4{
+    font-size: 1.3rem;
+}
+.second__nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-items: center;
+    padding: 10px 10px;
+    width: 100%;
+    background-color: rgb(33 33 33 / 9%);
+}
+ .second__nav div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px;
+    font-weight: 300;
+    font-size: 1.3rem;
+
+ }
+
+.section__vinos--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    align-items: center;
+}
+
+.section__vinos--flex img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.section__vinos--flex figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    margin: 10px;
+    background-color: #2c7877;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.section__vinos--flex p,figcaption {
+    color: rgb(247, 243, 243);
+    background-color: #699493;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 2px auto;
+    padding: 2px;
+}
+
+/*GRID VINOS*/
+
+.grid__contenedor--vinos{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "filtros catalogo"
+    "filtros catalogo"
+    "footer-vinos footer-vinos";
+}
+
+.grid__area--filtros{
+    grid-area: filtros;
+}
+
+.grid__area--catalogo{
+    grid-area: catalogo;
+}
+
+.grid__area--footer--vinos{
+    grid-area: footer-vinos;
+}
+
+@media screen and (min-width: 768px){
+    h4{
+        font-size: 1.8rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+        padding-left: 15px;
+    }
+
+    .second__nav div {
+        font-size: 1.5rem;
+        justify-content: space-between;
+        padding: 5px 5px;
+        
+    }
+
+    .section__vinos--flex p,figcaption {
+        font-size: 1.7rem;
+        padding: 5px;
+        border-radius: 5px; 
+    }
+    
+    .section__vinos--flex figure{
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .second__nav div{
+        font-size: 1.8rem;
+        padding-top: 10px;
+    }
+
+    h4{
+        padding-top: 10px;
+    }
+
+    .section__vinos--flex p,figcaption {
+        font-size: 2rem;
+    }
+
+    .section__vinos--flex figure{
+        border-radius: 12px;
+        padding: 10px;
+        width: 30%;
+    }
+
+}
+
+@media screen and (min-width: 1400px){
+    .section__vinos--flex figure{
+        width: 25%;
+    }
+}
+
+/* TERMINA SECCION VINOS Y EMPIEZA CERVEZAS*/
+
+.section__cervezas--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.section__cervezas--flex img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.section__cervezas--flex figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    margin: 10px;
+    background-color: #2c7877;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.section__cervezas--flex p,figcaption {
+    color: rgb(247, 243, 243);
+    background-color: #699493;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 2px auto;
+    padding: 2px;
+}
+
+/* GRID CERVEZAS */
+
+.grid__contenedor--cervezas{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "filtros catalogo";
+}
+
+.grid__area--filtros{
+    grid-area: filtros;
+}
+
+.grid__area--catalogo{
+    grid-area: catalogo;
+}
+
+@media screen and (min-width: 768px){
+    h4{
+        font-size: 1.8rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .second__nav div {
+        font-size: 1.5rem;
+        justify-content: space-between;
+        padding: 5px 5px;
+        
+    }
+
+    .section__cervezas--flex p,figcaption {
+        font-size: 1.7rem;
+        padding: 5px;
+        border-radius: 5px; 
+    }
+    
+    .section__cervezas--flex figure{
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .second__nav div{
+        font-size: 1.8rem;
+        padding-top: 10px;
+    }
+
+    h4{
+        padding-top: 10px;
+    }
+
+    .section__cervezas--flex p,figcaption {
+        font-size: 2rem;
+    }
+
+    .section__cervezas--flex figure{
+        border-radius: 12px;
+        padding: 10px;
+        width: 30%;
+    }
+
+}
+
+@media screen and (min-width: 1400px){
+    .section__cervezas--flex figure{
+        width: 25%;
+    }
+}
+
+/* TERMINA CERVEZAS Y EMPIEZA ESPIRITUOSAS*/
+
+.section__espirituosas--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.section__espirituosas--flex img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.section__espirituosas--flex figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    margin: 10px;
+    background-color: #2c7877;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.section__espirituosas--flex p,figcaption {
+    color: rgb(247, 243, 243);
+    background-color: #699493;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 2px auto;
+    padding: 2px;
+}
+
+/* GRID ESPIRITUOSAS*/
+
+.grid__contenedor--espirituosas{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "filtros catalogo";
+}
+
+.grid__area--filtros{
+    grid-area: filtros;
+}
+
+.grid__area--catalogo{
+    grid-area: catalogo;
+}
+
+@media screen and (min-width: 768px){
+    h4{
+        font-size: 1.8rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .second__nav div {
+        font-size: 1.5rem;
+        justify-content: space-between;
+        padding: 5px 5px;
+        
+    }
+
+    .section__espirituosas--flex p,figcaption {
+        font-size: 1.7rem;
+        padding: 5px;
+        border-radius: 5px; 
+    }
+    
+    .section__espirituosas--flex figure{
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+   
+    .second__nav div{
+        font-size: 1.8rem;
+        padding-top: 10px;
+    }
+
+    h4{
+        padding-top: 10px;
+    }
+
+    .section__espirituosas--flex p,figcaption {
+        font-size: 2rem;
+    }
+
+    .section__espirituosas--flex figure{
+        border-radius: 12px;
+        padding: 10px;
+        width: 30%;
+    }
+
+}
+
+@media screen and (min-width: 1400px){
+    .section__espirituosas--flex figure{
+        width: 25%;
+    }
+}
+
+/* TERMINA ESPIRITUOSAS EMPIEZA OFERTAs*/
+
+.section__ofertas--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.section__ofertas--flex img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.section__ofertas--flex figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    margin: 10px;
+    background-color: #2c7877;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.section__ofertas--flex p,figcaption {
+    color: rgb(247, 243, 243);
+    background-color: #699493;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 2px auto;
+    padding: 2px;
+}
+
+/* GRID OFERTAS*/
+
+.grid__contenedor--ofertas{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "filtros catalogo";
+}
+
+.grid__area--filtros{
+    grid-area: filtros;
+}
+
+.grid__area--catalogo{
+    grid-area: catalogo;
+}
+
+@media screen and (min-width: 768px){
+    h4{
+        font-size: 1.8rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .second__nav div {
+        font-size: 1.5rem;
+        justify-content: space-between;
+        padding: 5px 5px;
+        
+    }
+
+    .section__ofertas--flex p,figcaption {
+        font-size: 1.7rem;
+        padding: 5px;
+        border-radius: 5px; 
+    }
+    
+    .section__ofertas--flex figure{
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+   
+    .second__nav div{
+        font-size: 1.8rem;
+        padding-top: 10px;
+    }
+
+    h4{
+        padding-top: 10px;
+    }
+
+    .section__ofertas--flex p,figcaption {
+        font-size: 2rem;
+    }
+
+    .section__ofertas--flex figure{
+        border-radius: 12px;
+        padding: 10px;
+        width: 30%;
+    }
+
+}
+
+@media screen and (min-width: 1400px){
+    .section__ofertas--flex figure{
+        width: 25%;
+    }
+}
+
