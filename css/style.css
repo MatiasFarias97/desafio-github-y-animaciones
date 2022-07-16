@@ -94,8 +94,9 @@ a {
     font-size: 1.5rem;
 }
 .aside__style p {
-    background-color: #bfbd49a9;
+    background: linear-gradient(to bottom, #D6D44D, rgba(52, 51, 51, 0.501));
     padding: 2%;
+    margin: 10px auto;
 }
 
 .aside__img {
@@ -277,22 +278,6 @@ h2,h3 {
         width: 10%;
     }
 
-    @keyframes animacion__aside {
-        0%{background-image: url(../imagenes/corona_aside.jpg);}
-        25%{background-image: url(imagenes/jagger_aside.jpg);}
-        50%{background-image: url(imagenes/skyy_aside.jpg);}
-        100%{background-image: url(imagenes/befeater_aside.png);}
-    }
-
-    .aside__animacion{
-        height: 100%;
-        width: 40%;
-        background-size: cover;
-        animation-name: animacion__aside;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        border: solid black 2px;
-    }
 
     html {
         overflow-x: hidden;
